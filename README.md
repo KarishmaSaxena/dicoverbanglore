@@ -1,4 +1,10 @@
-# 🌿 Bengaluru Explorer
+# Discover Banglore
+
+A travel website to explore Bangalore.
+
+**Live Demo:** [https://dicoverbanglorewebsite.vercel.app](https://dicoverbanglorewebsite.vercel.app)  
+**Source Code:** [GitHub Repo](https://github.com/KarishmaSaxena/dicoverbanglore)
+
 
 A beautiful tourist website for natives of Bangalore built with **Astro** and **React**.
 
