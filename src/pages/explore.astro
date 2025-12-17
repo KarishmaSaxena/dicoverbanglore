@@ -1,0 +1,333 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Explore - Discover Bangalore">
+  <Header client:load />
+
+  <main>
+    <section class="explore">
+      <div class="container">
+        <h1>Explore Bangalore</h1>
+
+        <!-- CARDS -->
+        <div class="cards">
+          <div class="card" data-scroll="#food">
+            <div class="card-icon">🍲</div>
+            <h3>Food & Cafes</h3>
+            <p>From traditional South Indian breakfast spots to trendy cafes, Bangalore's food scene is diverse and delicious.</p>
+          </div>
+          <div class="card" data-scroll="#culture">
+            <div class="card-icon">🎭</div>
+            <h3>Culture & History</h3>
+            <p>Discover ancient temples, historic palaces, and museums that tell the story of this vibrant city.</p>
+          </div>
+          <div class="card" data-scroll="#modern">
+            <div class="card-icon">🌆</div>
+            <h3>Modern City Life</h3>
+            <p>Experience the tech hub of India with modern malls, pubs, and the bustling startup culture.</p>
+          </div>
+          <div class="card" data-scroll="#activities">
+            <div class="card-icon">🎢</div>
+            <h3>Activities</h3>
+            <p>Top fun things to do in Bangalore, suitable for both winter and summer, with cost and timings.</p>
+          </div>
+        </div>
+
+        <!-- FOOD & CAFES -->
+        <div id="food" class="section">
+          <h2>Food & Cafes</h2>
+          <div class="item-list">
+            <div class="item">
+              <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80" alt="MTR Restaurant" />
+              <div class="item-content">
+                <h3>MTR (Mavalli Tiffin Rooms)</h3>
+                <p>Iconic South Indian restaurant known for dosas and filter coffee.</p>
+                <p><strong>Timing:</strong> 7 AM - 10 PM</p>
+                <p><a href="https://www.mtrrestaurants.com/" target="_blank">Website</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Third Wave Coffee" />
+              <div class="item-content">
+                <h3>Third Wave Coffee Roasters</h3>
+                <p>Trendy cafe serving specialty coffee and desserts in a cozy ambiance.</p>
+                <p><strong>Timing:</strong> 8 AM - 9 PM</p>
+                <p><a href="https://thirdwavecoffeeroasters.com/" target="_blank">Website</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CULTURE & HISTORY -->
+        <div id="culture" class="section">
+          <h2>Culture & History</h2>
+          <div class="item-list">
+            <div class="item">
+              <img src="BangalorePalace.jpeg?auto=format&fit=crop&w=800&q=80" alt="Bangalore Palace" />
+              <div class="item-content">
+                <h3>Bangalore Palace</h3>
+                <p>Royal residence inspired by Windsor Castle with grand interiors and gardens.</p>
+                <p><strong>Timing:</strong> 10 AM - 5:30 PM</p>
+                <p><a href="https://www.bangalorepalace.com/" target="_blank">Website</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="vidhana.webp?auto=format&fit=crop&w=800&q=80" alt="Vidhana Soudha" />
+              <div class="item-content">
+                <h3>Vidhana Soudha</h3>
+                <p>Iconic legislative building showcasing Karnataka’s governance and architecture.</p>
+                <p><strong>Timing:</strong> View from outside (entry restricted)</p>
+                <p><a href="https://www.karnataka.gov.in/" target="_blank">Website</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="tipu.jpeg?auto=format&fit=crop&w=800&q=80" alt="Tipu Sultan Palace" />
+              <div class="item-content">
+                <h3>Tipu Sultan Summer Palace</h3>
+                <p>Historic palace built in teak wood, representing the legacy of Tipu Sultan.</p>
+                <p><strong>Timing:</strong> 10 AM - 5 PM</p>
+                <p><a href="https://en.wikipedia.org/wiki/Tipu_Sultan%27s_Summer_Palace" target="_blank">Website</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="lal.jpeg?auto=format&fit=crop&w=800&q=80" alt="Lalbagh Botanical Garden" />
+              <div class="item-content">
+                <h3>Lalbagh Botanical Garden</h3>
+                <p>Famous garden with rare plants, a glasshouse, bonsai collection, and lake.</p>
+                <p><strong>Timing:</strong> 6 AM - 7 PM</p>
+                <p><a href="https://www.horticulture.kar.nic.in/lalbagh.htm" target="_blank">Website</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="bull.jpeg?auto=format&fit=crop&w=800&q=80" alt="Bull Temple" />
+              <div class="item-content">
+                <h3>Bull Temple (Dodda Basavana Gudi)</h3>
+                <p>Ancient temple famous for Nandi Bull statue and Dravidian architecture.</p>
+                <p><strong>Timing:</strong> 6 AM - 12 PM, 5 PM - 8 PM</p>
+                <p><a href="https://en.wikipedia.org/wiki/Bull_Temple,_Bangalore" target="_blank">Website</a></p>
+              </div>
+            </div>
+          
+          
+          </div>
+        </div>
+
+        <!-- MODERN CITY LIFE -->
+        <div id="modern" class="section">
+          <h2>Modern City Life</h2>
+          <div class="item-list">
+            <div class="item">
+              <img src="moderncity.jpeg?auto=format&fit=crop&w=800&q=80" alt="UB City" />
+              <div class="item-content">
+                <h3>UB City Mall</h3>
+                <p>Luxury mall with shopping, fine dining, and nightlife in Bangalore.</p>
+                <p><strong>Timing:</strong> 10 AM - 10 PM</p>
+                <p><a href="https://www.ubcity.in/" target="_blank">Website</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVITIES -->
+        <div id="activities" class="section">
+          <h2>Top Activities</h2>
+          <div class="item-list">
+            <div class="item">
+              <img src="nandi.jpeg?auto=format&fit=crop&w=800&q=80" alt="Nandi Hills" />
+              <div class="item-content">
+                <h3>Nandi Hills Trek</h3>
+                <p>Popular hill trek with sunrise views.</p>
+                <p><strong>Timing:</strong> 5 AM - 9 AM</p>
+                <p><strong>Season:</strong> Winter/Summer</p>
+                <p><strong>Cost:</strong> Free</p>
+                <p><a href="https://en.wikipedia.org/wiki/Nandi_Hills,_Karnataka" target="_blank">More Info</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="wonderla.jpeg?auto=format&fit=crop&w=800&q=80" alt="Wonderla" />
+              <div class="item-content">
+                <h3>Wonderla Amusement Park</h3>
+                <p>Exciting rides and water attractions for all ages.</p>
+                <p><strong>Timing:</strong> 10 AM - 6 PM</p>
+                <p><strong>Season:</strong> Winter/Summer</p>
+                <p><strong>Cost:</strong> ₹1,200 approx</p>
+                <p><a href="https://www.wonderla.com/bangalore/" target="_blank">More Info</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="grips.jpeg?auto=format&fit=crop&w=800&q=80" alt="GoKarting" />
+              <div class="item-content">
+                <h3>Grips Go Karting</h3>
+                <p>Thrilling go-kart experience for adventure enthusiasts.</p>
+                <p><strong>Timing:</strong> 10 AM - 8 PM</p>
+                <p><strong>Season:</strong> Winter/Summer</p>
+                <p><strong>Cost:</strong> ₹500 approx</p>
+                <p><a href="https://www.gripskarting.com/" target="_blank">More Info</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="artcultural.jpeg?auto=format&fit=crop&w=800&q=80" alt="Art Gallery" />
+              <div class="item-content">
+                <h3>Art & Cultural Workshops</h3>
+                <p>Hands-on sessions for painting, pottery, and crafts.</p>
+                <p><strong>Timing:</strong> 10 AM - 5 PM</p>
+                <p><strong>Season:</strong> Winter/Summer</p>
+                <p><strong>Cost:</strong> ₹300 approx</p>
+                <p><a href="https://www.kashiyatra.com/" target="_blank">More Info</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="cyclingtour.jpeg?auto=format&fit=crop&w=800&q=80" alt="Cycling Tour" />
+              <div class="item-content">
+                <h3>Bangalore Cycling Tour</h3>
+                <p>Guided city cycling tours exploring landmarks and local culture.</p>
+                <p><strong>Timing:</strong> 6 AM - 10 AM</p>
+                <p><strong>Season:</strong> Winter/Summer</p>
+                <p><strong>Cost:</strong> ₹400 approx</p>
+                <p><a href="https://www.bikeonbikes.com/" target="_blank">More Info</a></p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer client:load />
+</Layout>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("click", () => {
+      const target = document.querySelector(card.getAttribute("data-scroll"));
+      target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+});
+</script>
+
+<style>
+
+.explore {
+  padding: 60px 0;
+}
+
+.explore h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 60px;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+/* ITEM LIST */
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 24px;
+}
+
+.item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-4px);
+}
+
+.item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.item-content {
+  padding: 16px;
+}
+
+.item-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.item-content p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.item-content a {
+  color: #0066cc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.item-content a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .item-list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Discover Bangalore - Explore India's Silicon Valley">
+  <Header client:load />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="/landingimage.avif" alt="Cubbon Park Bangalore" class="hero-bg" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Discover Bangalore</h1>
+        <p>Explore the culture, food, and famous places of India's Silicon Valley.</p>
+        <a href="/places" class="btn">Explore Places</a>
+      </div>
+    </section>
+
+      <section class="whychooseus">
+      <div class="container">
+        <div class="whychooseus-wrapper">
+          <div class="whychooseus-content">
+            <h2>Why Choose Us?</h2>
+            <p>We bring you authentic local insights, not generic tourist lists, helping you explore Bangalore with confidence and clarity. Every place is carefully curated to reflect the city’s true culture, heritage, and everyday charm. From peaceful parks to historic landmarks and hidden gems, we make discovery simple and meaningful. Our platform is designed to save your time while offering trustworthy recommendations. Experience Bangalore the way locals know and love it.</p>
+          </div>
+          <div class="whychooseus-image">
+            <img src="/whychose.jpg" alt="Why Choose Us" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured">
+      <div class="container">
+        <h2>Featured Places</h2>
+
+<a href="/places" class="card-link">
+        <div class="cards">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1585128792020-803d29415281?auto=format&fit=crop&w=600&q=80" />
+            <div class="card-content">
+              <h3>Lalbagh Botanical Garden</h3>
+              <p>A beautiful 240-acre garden with rare plants and a stunning glass house.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=600&q=80" />
+            <div class="card-content">
+              <h3>Cubbon Park</h3>
+              <p>A green oasis in the heart of the city, perfect for morning walks.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80" />
+            <div class="card-content">
+              <h3>Bangalore Palace</h3>
+              <p>A royal palace inspired by England's Windsor Castle architecture.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1600320254374-ce2d293c324e?auto=format&fit=crop&w=600&q=80" />
+            <div class="card-content">
+              <h3>Vidhana Soudha</h3>
+              <p>An iconic landmark showcasing neo-Dravidian architecture.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:load />
+</Layout>
+
+<style>
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 100px;
+  color: #fff;
+}
+
+.hero-content p {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 24px;
+}
+
+/* FEATURED */
+.featured {
+  padding: 30px 0 0 0;
+}
+
+.featured h2 {
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+}
+
+.card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.whychooseus {
+  padding: 80px 0 60px 0;
+}
+
+.whychooseus-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.whychooseus-content {
+  flex: 1;
+}
+
+.whychooseus h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.whychooseus-content p {
+  font-size: 30px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.whychooseus-image {
+  flex: 1;
+  margin-top: 120px;
+}
+
+.whychooseus-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn{
+  background-color:white;
+  border-radius: 16px;
+   font-weight: 500;
+   padding: 14px 36px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+}
+</style>

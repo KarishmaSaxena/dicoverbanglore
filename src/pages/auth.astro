@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import LoginSignup from '../components/LoginSignup.jsx';
+---
+
+<Layout title="Login / Signup - Discover Bangalore">
+  <Header client:load />
+
+  <main>
+    <LoginSignup client:load />
+  </main>
+
+  <Footer client:load />
+</Layout>

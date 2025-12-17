@@ -1,0 +1,194 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Places - Discover Bangalore">
+  <Header client:load />
+
+  <main>
+    <section class="places">
+      <div class="container">
+        <h1>Popular Tourist Places</h1>
+
+        <div class="place-list">
+
+          <!-- Lalbagh -->
+          <div class="place-item">
+            <div class="place-image">
+              <img src="https://images.unsplash.com/photo-1585128792020-803d29415281?auto=format&fit=crop&w=800&q=80" alt="Lalbagh" />
+            </div>
+            <div class="place-content">
+              <h3>Lalbagh Botanical Garden</h3>
+              <p class="place-text">
+                Lalbagh is one of Bengaluru’s major attractions. A sprawling garden situated in a 240 acres piece of land in the heart of the city, Lalbagh houses India’s largest collection of tropical plants and sub-tropical plants, including trees that are several centuries old. Exhibits like the Snow White and the seven dwarfs, and a topiary park, an expansive lake, a beautiful glasshouse modelled around the Crystal Palace in London adorn the park giving it a surrealistic atmosphere. A watchtower perched on top of a 3000 million years old rocky outcrop (which is a National Geological Monument), built by Kempegowda, the founder of Bengaluru also adorns the picturesque garden.
+
+Why visit Lalbagh:
+Lalbagh Glass House, Lalbagh Lake, Seasonal attractions, Bonsai Garden, Kempegowda Watchtower, Flower Clock, Hibiscus Garden.
+
+Lalbagh Visiting Hours: 6 AM to 7 PM. Entry is free early morning/late evening.
+
+Facilities: Shops, toilets, and multiple entrances.
+
+How to reach: Metro, buses, taxis.
+
+Places to stay: Jayanagara, Basavanagudi, KR Market area.
+              </p>
+              <button class="read-more">Read More</button>
+            </div>
+          </div>
+
+          <!-- Cubbon Park -->
+          <div class="place-item">
+            <div class="place-image">
+              <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80" alt="Cubbon Park" />
+            </div>
+            <div class="place-content">
+              <h3>Cubbon Park</h3>
+              <p class="place-text">
+                A green haven spread across 300 acres, Cubbon Park provides Bengalureans with a refuge from the hustle and bustle of city life right in the middle of the city. The park is home to the State Library housed in the Sheshadri Iyer Memorial Hall, a splendid red Gothic structure. The whole park is peppered with fountains, statues, flowering trees and lush greenery.
+
+Things To Do: Seshadri Iyer Memorial Hall, Children’s play area and Toy Train, Aquarium.
+
+Entry fee: Free.
+
+Places to visit nearby: Vidhana Soudha, High Court of Karnataka, Freedom Park, Kanteerava Indoor Stadium, Vishveshwaraya Industrial & Technological Museum.
+
+How to reach: Metro, bus, or taxi.
+              </p>
+              <button class="read-more">Read More</button>
+            </div>
+          </div>
+
+          <!-- Bangalore Palace -->
+          <div class="place-item">
+            <div class="place-image">
+              <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80" alt="Bangalore Palace" />
+            </div>
+            <div class="place-content">
+              <h3>Bangalore Palace</h3>
+              <p class="place-text">
+                Bangalore Palace is a royal residence inspired by England’s Windsor Castle. The palace features grand architecture, wooden interiors, and elegant designs. It gives visitors a glimpse into the lifestyle of the former royal family. Beautiful gardens surround the palace, enhancing its charm. The palace was built in 1887. It hosts concerts and cultural events. The interiors display royal artifacts. It is a major tourist attraction in Bangalore.
+              </p>
+              <button class="read-more">Read More</button>
+            </div>
+          </div>
+
+          <!-- Vidhana Soudha -->
+          <div class="place-item">
+            <div class="place-image">
+              <img src="vidhana.webp?auto=format&fit=crop&w=800&q=80" alt="Vidhana Soudha" />
+            </div>
+            <div class="place-content">
+              <h3>Vidhana Soudha</h3>
+              <p class="place-text">
+                Vidhana Soudha is one of the landmark iconic structures of Bengaluru, Karnataka. It houses the Legislative Assembly (Vidhan Sabha) and the Legislative Council (Vidhan Parishad). Constructed between 1951 and 1956, it was initiated by PM Jawaharlal Nehru and commissioned by Chief Minister Kengal Hanumanthaiah. It epitomizes the legislative and democratic functioning of Karnataka and represents political, administrative, and cultural importance.
+              </p>
+              <button class="read-more">Read More</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:load />
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".read-more").forEach(button => {
+      button.addEventListener("click", () => {
+        const container = button.closest(".place-content");
+        const text = container.querySelector(".place-text");
+        text.classList.toggle("expanded");
+        button.textContent = text.classList.contains("expanded")
+          ? "Read Less"
+          : "Read More";
+      });
+    });
+  });
+</script>
+
+<style>
+.places {
+  padding: 60px 0;
+}
+
+.places h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.place-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.place-item {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* IMAGE */
+.place-image {
+  flex: 0 0 40%;
+}
+
+.place-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* CONTENT */
+.place-content {
+  flex: 1;
+}
+
+.place-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.place-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  max-height: 140px; /* show approx 7 lines */
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.place-text.expanded {
+  max-height: 800px; /* increase when read more clicked */
+}
+
+/* READ MORE BUTTON */
+.read-more {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #0066cc;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .place-item {
+    flex-direction: column;
+  }
+
+  .place-image img {
+    height: 220px;
+  }
+}
+</style>
